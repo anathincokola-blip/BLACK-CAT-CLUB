@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BLACK CAT CLUB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-header">
+  <nav class="navbar">
+    <a href="#home" class="brand">
+      <img src="images/black-cat-logo.png" alt="Black Cat Club Logo">
+      <span>BLACK CAT CLUB</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#login" class="active">Login</a></li>
+
+      <li class="admin-link"><a href="#signup">Admin Register</a></li>
+
+      <li class="protected-link"><a href="#dashboardPage">Dashboard</a></li>
+      <li class="protected-link"><a href="#squad">Squad</a></li>
+      <li class="protected-link"><a href="#development">Development</a></li>
+      <li class="protected-link"><a href="#staff">Coach & Staff</a></li>
+      <li class="protected-link"><a href="#signings">Signings</a></li>
+      <li class="protected-link"><a href="#contracts">Contracts</a></li>
+      <li class="protected-link"><a href="#finances">Money</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero active-page" id="home">
+  <div class="hero-content">
+    <img src="images/black-cat-logo.png" alt="Black Cat Club Logo" class="main-logo">
+
+    <h1>BLACK CAT CLUB</h1>
+    <p>Nomlacu, Bizana</p>
+
+    <a href="#login" class="hero-btn">Enter Club Login</a>
+  </div>
+</section>
+
+<section class="page-section" id="login">
+  <div class="section-header">
+    <span></span>
+    <h2>Club Login</h2>
+    <span></span>
+  </div>
+
+  <div class="login-grid">
+    <form id="loginForm" class="card">
+      <h3>Login</h3>
+
+      <input type="text" id="loginEmail" placeholder="Username or Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+
+      <button type="submit" class="action-btn">Login</button>
+
+      <p id="loginMessage" class="message"></p>
+
+      <div class="demo-box">
+        <h4>Athi Admin Login</h4>
+        <p>Username: <strong>Athi Ncokola</strong></p>
+        <p>Password: <strong>0630365628</strong></p>
+
+        <h4>Manager Login</h4>
+        <p>Username: <strong>manager</strong></p>
+        <p>Password: <strong>Manager123</strong></p>
+      </div>
+    </form>
+
+    <div class="card">
+      <h3>System Rules</h3>
+
+      <ul class="rules">
+        <li>Athi Ncokola is Technician + Admin Access.</li>
+        <li>Only Athi can register players and staff.</li>
+        <li>Manager can manage the money page.</li>
+        <li>Money page shows income, expenses, balance and full report.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="page-section" id="dashboardPage">
+  <div class="section-header">
+    <span></span>
+    <h2>Dashboard</h2>
+    <span></span>
+  </div>
+
+  <div id="dashboard" class="card">
+    <h3>No one logged in</h3>
+    <p>Please login first.</p>
+  </div>
+</section>
+
+<section class="page-section" id="signup">
+  <div class="section-header">
+    <span></span>
+    <h2>Admin Register</h2>
+    <span></span>
+  </div>
+
+  <div id="signupLocked" class="card locked-card">
+    <h3>Admin Access Required 🔒</h3>
+    <p>Only Athi Ncokola can register players, staff, coaches, technicians and development players.</p>
+    <a href="#login" class="hero-btn">Login as Athi</a>
+  </div>
+
+  <div id="signupContent" class="register-grid">
+    <form id="signupForm" class="card">
+      <h3>Register New Person</h3>
+
+      <div class="form-row">
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <input type="number" id="signupAge" placeholder="Age" required>
+      </div>
+
+      <div class="form-row">
+        <input type="text" id="signupEmail" placeholder="Username / Email" required>
+        <input type="text" id="signupPhone" placeholder="Phone Number" required>
+      </div>
+
+      <div class="form-row">
+        <input type="password" id="signupPassword" placeholder="Password" required>
+
+        <select id="signupCategory" required>
+          <option value="">Category</option>
+          <option value="Player">Player</option>
+          <option value="Development Player">Development Player</option>
+          <option value="Coach">Coach</option>
+          <option value="Staff">Staff</option>
+          <option value="Technician">Technician</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <select id="signupPosition" required>
+          <option value="">Position / Role</option>
+          <option>Goalkeeper</option>
+          <option>Defender</option>
+          <option>Midfielder</option>
+          <option>Winger</option>
+          <option>Striker</option>
+          <option>Coach</option>
+          <option>Assistant Coach</option>
+          <option>Fitness Trainer</option>
+          <option>Team Staff</option>
+          <option>Technician</option>
+          <option>Manager</option>
+        </select>
+
+        <select id="signupAvailability" required>
+          <option value="">Next Match Status</option>
+          <option>Available</option>
+          <option>Injured</option>
+          <option>Suspended</option>
+          <option>Illness</option>
+          <option>Not okay for next match</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <select id="signupContractType" required>
+          <option value="">Contract Type</option>
+          <option>Trial Contract</option>
+          <option>1 Year</option>
+          <option>2 Years</option>
+          <option>Development Contract</option>
+          <option>Staff Contract</option>
+          <option>Technical Contract</option>
+        </select>
+
+        <select id="signupSigningStatus" required>
+          <option value="">Signing Status</option>
+          <option>Pending</option>
+          <option>Signed</option>
+          <option>Rejected</option>
+          <option>Expired</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <input type="date" id="signupContractStart" required>
+        <input type="date" id="signupContractEnd" required>
+      </div>
+
+      <div class="form-row">
+        <input type="text" id="signupGuardianName" placeholder="Parent / Guardian Name" required>
+        <input type="text" id="signupGuardianContact" placeholder="Parent / Guardian Contact" required>
+      </div>
+
+      <button type="submit" class="action-btn">Register Person</button>
+
+      <p id="signupMessage" class="message"></p>
+    </form>
+
+    <div class="card">
+      <h3>Athi Admin Panel</h3>
+      <p>Athi Ncokola can add new players, development players, staff, coaches and technicians.</p>
+      <p>After registration, that person can login using the username/email and password created here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page-section" id="squad">
+  <div class="section-header">
+    <span></span>
+    <h2>Squad</h2>
+    <span></span>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Position</th>
+          <th>Status</th>
+          <th>Signing</th>
+          <th>Joined</th>
+        </tr>
+      </thead>
+      <tbody id="playersTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="page-section" id="development">
+  <div class="section-header">
+    <span></span>
+    <h2>Development Players</h2>
+    <span></span>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Position</th>
+          <th>Status</th>
+          <th>Contract</th>
+          <th>Signing</th>
+        </tr>
+      </thead>
+      <tbody id="developmentTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="page-section" id="staff">
+  <div class="section-header">
+    <span></span>
+    <h2>Coach & Staff</h2>
+    <span></span>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Category</th>
+          <th>Phone</th>
+          <th>Signing</th>
+        </tr>
+      </thead>
+      <tbody id="staffTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="page-section" id="signings">
+  <div class="section-header">
+    <span></span>
+    <h2>Signings</h2>
+    <span></span>
+  </div>
+
+  <div class="summary-grid">
+    <div class="card"><h4>Signed</h4><h3 id="signedCount">0</h3></div>
+    <div class="card"><h4>Pending</h4><h3 id="pendingCount">0</h3></div>
+    <div class="card"><h4>Players</h4><h3 id="playerCount">0</h3></div>
+    <div class="card"><h4>Staff</h4><h3 id="staffCount">0</h3></div>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Position</th>
+          <th>Signing</th>
+          <th>Signed By</th>
+        </tr>
+      </thead>
+      <tbody id="signingsTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="page-section" id="contracts">
+  <div class="section-header">
+    <span></span>
+    <h2>Contracts</h2>
+    <span></span>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Contract</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Signing</th>
+        </tr>
+      </thead>
+      <tbody id="contractsTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="page-section" id="finances">
+  <div class="section-header">
+    <span></span>
+    <h2>Money Report</h2>
+    <span></span>
+  </div>
+
+  <div id="financeLocked" class="card locked-card">
+    <h3>Money Page Locked 🔒</h3>
+    <p>Only the club manager can view and manage money.</p>
+  </div>
+
+  <div id="financeContent">
+    <div class="summary-grid">
+      <div class="card money-card">
+        <h4>Total Balance</h4>
+        <h3 id="moneyBalance">R0.00</h3>
+      </div>
+
+      <div class="card money-card">
+        <h4>Total Income</h4>
+        <h3 id="moneyIncome">R0.00</h3>
+      </div>
+
+      <div class="card money-card">
+        <h4>Total Expenses</h4>
+        <h3 id="moneyExpenses">R0.00</h3>
+      </div>
+
+      <div class="card money-card">
+        <h4>Transactions</h4>
+        <h3 id="moneyTransactionsCount">0</h3>
+      </div>
+    </div>
+
+    <div class="money-grid">
+      <form id="moneyForm" class="card">
+        <h3>Add Money Record</h3>
+
+        <select id="moneyType" required>
+          <option value="">Select Type</option>
+          <option value="Income">Income - Money Coming In</option>
+          <option value="Expense">Expense - Money Going Out</option>
+        </select>
+
+        <input type="number" id="moneyAmount" placeholder="Amount e.g. 500" required>
+
+        <input type="text" id="moneySource" placeholder="Where money came from / went to" required>
+
+        <select id="moneyCategory" required>
+          <option value="">Money Category</option>
+          <option>Donation</option>
+          <option>Sponsor</option>
+          <option>Registration Fee</option>
+          <option>Transport</option>
+          <option>Kit / Equipment</option>
+          <option>Food / Refreshments</option>
+          <option>Medical</option>
+          <option>Match Fees</option>
+          <option>Other</option>
+        </select>
+
+        <textarea id="moneyNote" placeholder="Write short note / reason" required></textarea>
+
+        <button type="submit" class="action-btn">Save Money Record</button>
+
+        <p id="moneyMessage" class="message"></p>
+      </form>
+
+      <div class="card">
+        <h3>Money Rules</h3>
+        <p>Every record must show where money came from or where it went.</p>
+        <p>Income increases club balance.</p>
+        <p>Expenses reduce club balance.</p>
+        <p>Only manager can control this page.</p>
+      </div>
+    </div>
+
+    <div class="table-card money-table">
+      <h3>Money Transactions Report</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Source / Destination</th>
+            <th>Category</th>
+            <th>Note</th>
+            <th>Added By</th>
+          </tr>
+        </thead>
+        <tbody id="moneyTable"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 BLACK CAT CLUB | Nomlacu, Bizana</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
