@@ -24,15 +24,15 @@ const starterMembers = [
     joined: "01 Jan 2026"
   },
   {
-    name: "Club Manager",
+    name: "Tommy",
     age: "Manager",
-    phone: "070 000 0000",
+    phone: "0730165425",
     category: "Staff",
     position: "Manager",
     role: "Manager",
     adminAccess: false,
-    email: "manager",
-    password: "Manager123",
+    email: "tommy",
+    password: "0730165425",
     availability: "Available",
     contractType: "Staff Contract",
     signingStatus: "Signed",
@@ -621,7 +621,7 @@ function setupMoneyForm() {
     event.preventDefault();
 
     if (!canManageMoney()) {
-      showMessage("moneyMessage", "Only manager can add money records.", "error");
+      showMessage("moneyMessage", "Only Tommy the manager can add money records.", "error");
       return;
     }
 
